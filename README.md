@@ -17,7 +17,7 @@ means "what you pass into a function," "response" means "what you get back"
 - **`Holding`** is one row inside the fund — one stock/bond it owns. It is
   inherently narrow: a single position only ever has a name, a weight, a
   country, a sector, and a few other facts. Don't expect 500 fields here —
-  that's not what a holding *is*.
+  that's not what a holding _is_.
 - **`FundProfile`** is the fund itself — the "factsheet" half of ETF data.
   This is where the richness lives: cost, structure, risk, performance,
   every allocation breakdown, and computed cost-impact metrics. This is the
@@ -68,25 +68,25 @@ constituent:
     "sector": "Technology",
     "currency": "USD",
     "asset_class": "Equity",
-    "weight": 4.5,        // percent, 0-100
+    "weight": 4.5, // percent, 0-100
     "shares": 1000,
-    "market_value": 500000
-  }
+    "market_value": 500000,
+  },
 ]
 ```
 
-| Field | Type | Notes |
-|---|---|---|
-| `name` | str | Security name as the issuer reports it |
-| `symbol` | str | Ticker, when the issuer provides one |
-| `isin` | str | |
-| `country` | str | Full country name (not ISO code) — matches issuer convention |
-| `sector` | str | Issuer's own sector taxonomy (GICS-like, not always GICS exactly) |
-| `currency` | str | Trading currency of the holding |
-| `asset_class` | str | "Equity", "Fixed Income", "Cash", "Derivative", etc. |
-| `weight` | float | Percent of fund, 0–100 (not 0–1) |
-| `shares` | float | |
-| `market_value` | float | In the fund's base currency unless the issuer says otherwise |
+| Field          | Type  | Notes                                                             |
+| -------------- | ----- | ----------------------------------------------------------------- |
+| `name`         | str   | Security name as the issuer reports it                            |
+| `symbol`       | str   | Ticker, when the issuer provides one                              |
+| `isin`         | str   |                                                                   |
+| `country`      | str   | Full country name (not ISO code) — matches issuer convention      |
+| `sector`       | str   | Issuer's own sector taxonomy (GICS-like, not always GICS exactly) |
+| `currency`     | str   | Trading currency of the holding                                   |
+| `asset_class`  | str   | "Equity", "Fixed Income", "Cash", "Derivative", etc.              |
+| `weight`       | float | Percent of fund, 0–100 (not 0–1)                                  |
+| `shares`       | float |                                                                   |
+| `market_value` | float | In the fund's base currency unless the issuer says otherwise      |
 
 Resolve which parser to call dynamically instead of importing directly:
 
@@ -208,7 +208,7 @@ parser:
    `eu/vanguard.py` or `eu/ishares.py`.
 
 Fund-finder / holdings-download starting points by issuer (these are
-fund-finder *root* pages — each fund's actual export URL is fund-specific,
+fund-finder _root_ pages — each fund's actual export URL is fund-specific,
 found via the fund's own page):
 
 **US issuers**

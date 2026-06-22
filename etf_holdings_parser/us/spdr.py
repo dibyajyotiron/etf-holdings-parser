@@ -1,9 +1,16 @@
 """Parses SPDR/State Street US holdings export (ssga.com daily holdings file).
 
-SPDR's daily holdings export is a flat CSV (no metadata preamble, unlike
-iShares) with columns: Name, Ticker, Identifier (SEDOL/ISIN-ish), SEDOL,
-Weight, Sector, Shares Held, Local Currency. Column names occasionally vary
-slightly by fund (some include "ISIN" instead of "Identifier") — handle both.
+Verified 2026-06-22 against a live download of SPY's holdings xlsx (the
+caller converts xlsx -> CSV before handing it to `parse`; see
+parser-worker/src/scrapers/us_spdr.py for the metadata-preamble handling
+that conversion needs). Real columns observed for SPY: Name, Ticker,
+Identifier, SEDOL, Weight, Sector, Shares Held, Local Currency — no Country,
+Asset Class, or Market Value column on this fund's export (left unset below;
+other SPDR funds may include them, hence the fallback column names).
+
+"Identifier" is the security's CUSIP for US holdings, not an ISIN — do not
+treat it as one. Only a column literally named "ISIN" (present on some
+international SPDR funds) is used for the `isin` field.
 """
 
 from __future__ import annotations
@@ -21,7 +28,7 @@ def parse(raw: str) -> list[Holding]:
             Holding(
                 name=name,
                 symbol=(row.get("Ticker") or "").strip(),
-                isin=(row.get("ISIN") or row.get("Identifier") or "").strip(),
+                isin=(row.get("ISIN") or "").strip(),
                 country=(row.get("Country") or "").strip(),
                 sector=(row.get("Sector") or row.get("GICS Sector") or "").strip(),
                 currency=(row.get("Local Currency") or row.get("Currency") or "").strip(),
