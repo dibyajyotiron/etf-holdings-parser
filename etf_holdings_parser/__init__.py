@@ -6,11 +6,26 @@ the matching `<region>.<issuer>.parse(raw)` function directly, or use
 """
 
 from etf_holdings_parser.base import (
+    AllocationBucket,
+    CalendarReturn,
+    ExchangeListing,
+    FundProfile,
     Holding,
     NotImplementedParser,
+    fee_drag,
     get_parser,
     list_parsers,
 )
 
-__all__ = ["Holding", "NotImplementedParser", "get_parser", "list_parsers"]
-__version__ = "0.1.0"
+__all__ = [
+    "AllocationBucket",
+    "CalendarReturn",
+    "ExchangeListing",
+    "FundProfile",
+    "Holding",
+    "NotImplementedParser",
+    "fee_drag",
+    "get_parser",
+    "list_parsers",
+]
+__version__ = "0.2.0"
