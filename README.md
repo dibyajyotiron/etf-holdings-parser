@@ -186,18 +186,33 @@ can pass (a) and fail (b), e.g. because the endpoint is hidden behind a bot
 challenge that only a real browser session clears.
 
 **Parser logic implemented (a) and live-fetch verified (b)** — confirmed
-2026-06-22 against a real download, not just a hand-built fixture:
-- `us.spdr` (SPY) — `parser-worker/src/scrapers/us_spdr.py` fetch + this
-  parser, end-to-end, 512 real holdings parsed.
+end-to-end against a real download, not just a hand-built fixture:
+- `us.spdr` (SPY, 2026-06-22) — `parser-worker/src/scrapers/us_spdr.py`
+  fetch + this parser, 512 real holdings parsed via plain HTTPS GET.
+- `eu.vanguard` (VWRA, 2026-06-23) — `parser-worker/src/scrapers/eu_vanguard.py`
+  drives a real headless browser to click the fund page's actual "Holdings
+  details" Download button (there is no static URL; the old guessed
+  `fund-facts-{id}.csv` path never existed). 3771 real holdings parsed.
+- `eu.ishares` (IGLN, 2026-06-23) — `parser-worker/src/scrapers/eu_ishares.py`
+  drives a headless browser through a cookie-consent banner and an
+  investor-type/country gate (both required before the real `.ajax`
+  download link even appears in the DOM), then fetches it authenticated.
+  Real format is SpreadsheetML XML, not the guessed CSV. IGLN itself is a
+  single-asset physical-gold ETC with no holdings list — `parse()` returns
+  one synthetic 100%-weighted "Commodity" holding for that case; an equity
+  UCITS fund's actual Holdings-worksheet format is still unverified (see
+  `_parse_holdings_sheet`'s docstring in `eu/ishares.py`).
+- `us.ishares` delegates to `eu.ishares` (same underlying BlackRock format),
+  but no US iShares fund has been independently live-verified yet.
 
-**Parser logic implemented (a), live-fetch currently blocked (b)**:
-- `us.ishares` / `eu.ishares` (delegates to the same BlackRock format) —
-  the `.ajax`/`?isin=` endpoints return Akamai's bot-challenge page (HTTP
-  200/500, wrong body) to a plain `requests.get()`. Needs a real browser
-  session (cookies + JS) to capture a working request.
-- `eu.vanguard` — the hardcoded `fund-facts-{id}.csv` path 404s; Vanguard's
-  real holdings download is a JS-driven "concealed API" call, not a static
-  file. The real endpoint hasn't been captured yet.
+**Why a headless browser, not just `requests`**: both Vanguard and iShares'
+download links are added to the page by client-side JS — Vanguard's because
+the file is generated as an in-browser blob (no server-side file exists at
+any URL), iShares' because the link is hidden behind gates whose state
+(cookies) only exists after a real page renders. `parser-worker/src/scrapers/browser.py`
+holds the shared Playwright helper both fetchers use.
+
+**Parser logic implemented (a), live-fetch unverified (b)**:
 - `sec_nport` — implemented against edgartools' object shape; not
   independently re-verified against a live SEC filing in the same pass.
 
@@ -208,13 +223,17 @@ challenge that only a real browser session clears.
 `eu.goldmansachs`, `us.vanguard`, `us.invesco`, `us.schwab`, `us.jpmorgan`,
 `us.fidelity`, `us.dimensional`, `us.firsttrust`, `us.wisdomtree`.
 
-**Fund profile parsers**: not yet implemented for any issuer — `FundProfile`
-is currently a schema only (see above). This is the highest-value next step.
+**Fund profile parsers**: not yet implemented for any issuer as structured
+`FundProfile` output — `FundProfile` is currently a schema only (see above),
+though `eu.ishares`'s `_overview_key_values()` helper already extracts
+TER/AUM/domicile/replication-style data from the real iShares Overview
+sheet internally (just not yet mapped out to a public `FundProfile` return).
 
-**To unblock (b) for iShares/Vanguard**: capturing a real, working request
-needs a browser devtools session (Network tab open) on the fund's page
-while clicking "Download holdings" — see "Capturing new issuer formats"
-below for the fund-finder URLs to start from.
+**Extending to a new fund**: for issuers already covered (Vanguard EU,
+iShares EU), adding a fund is just adding its ISIN + product page URL to
+`parser-worker/src/scrapers/funds.py` — no new parser code needed unless the
+fund's export shape differs (e.g. an equity iShares fund's real Holdings
+worksheet, once someone captures one).
 
 ## Capturing new issuer formats (contributions welcome)
 
