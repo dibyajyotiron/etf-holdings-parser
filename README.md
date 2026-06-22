@@ -177,19 +177,44 @@ etf_holdings_parser/
 
 ## Status
 
-**Holdings parsers implemented** (real CSV format ported, tested against
-fixtures): `eu.vanguard`, `eu.ishares`, `us.ishares` (delegates to
-`eu.ishares` — same BlackRock platform/format), `us.spdr`, `sec_nport`.
+Two different things can be true independently of each other, and the
+distinction matters: **(a)** does `parse(raw_text)` correctly turn a given
+issuer's export into `Holding` records, and **(b)** can the *caller*
+(`parser-worker`, which owns network I/O — this package never makes a
+request) actually fetch that export over plain HTTPS right now. An issuer
+can pass (a) and fail (b), e.g. because the endpoint is hidden behind a bot
+challenge that only a real browser session clears.
 
-**Holdings parsers stubbed** (registered, raise `NotImplementedParser` until
-ported): `eu.xtrackers`, `eu.amundi`, `eu.spdr`, `eu.invesco`, `eu.ubs`,
-`eu.hsbc`, `eu.wisdomtree`, `eu.lng`, `eu.vaneck`, `eu.bnpparibas`,
+**Parser logic implemented (a) and live-fetch verified (b)** — confirmed
+2026-06-22 against a real download, not just a hand-built fixture:
+- `us.spdr` (SPY) — `parser-worker/src/scrapers/us_spdr.py` fetch + this
+  parser, end-to-end, 512 real holdings parsed.
+
+**Parser logic implemented (a), live-fetch currently blocked (b)**:
+- `us.ishares` / `eu.ishares` (delegates to the same BlackRock format) —
+  the `.ajax`/`?isin=` endpoints return Akamai's bot-challenge page (HTTP
+  200/500, wrong body) to a plain `requests.get()`. Needs a real browser
+  session (cookies + JS) to capture a working request.
+- `eu.vanguard` — the hardcoded `fund-facts-{id}.csv` path 404s; Vanguard's
+  real holdings download is a JS-driven "concealed API" call, not a static
+  file. The real endpoint hasn't been captured yet.
+- `sec_nport` — implemented against edgartools' object shape; not
+  independently re-verified against a live SEC filing in the same pass.
+
+**Stubbed** (registered, raise `NotImplementedParser` until ported — neither
+(a) nor (b) done yet): `eu.xtrackers`, `eu.amundi`, `eu.spdr`, `eu.invesco`,
+`eu.ubs`, `eu.hsbc`, `eu.wisdomtree`, `eu.lng`, `eu.vaneck`, `eu.bnpparibas`,
 `eu.fidelity`, `eu.jpmorgan`, `eu.franklintempleton`, `eu.deka`,
 `eu.goldmansachs`, `us.vanguard`, `us.invesco`, `us.schwab`, `us.jpmorgan`,
 `us.fidelity`, `us.dimensional`, `us.firsttrust`, `us.wisdomtree`.
 
 **Fund profile parsers**: not yet implemented for any issuer — `FundProfile`
 is currently a schema only (see above). This is the highest-value next step.
+
+**To unblock (b) for iShares/Vanguard**: capturing a real, working request
+needs a browser devtools session (Network tab open) on the fund's page
+while clicking "Download holdings" — see "Capturing new issuer formats"
+below for the fund-finder URLs to start from.
 
 ## Capturing new issuer formats (contributions welcome)
 
