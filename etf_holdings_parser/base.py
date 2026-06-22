@@ -164,8 +164,11 @@ class NotImplementedParser(NotImplementedError):
 def safe_float(value: str | None) -> float:
     if not value:
         return 0.0
+    cleaned = str(value).strip()
+    for symbol in ("US$", "$", "£", "€", ",", "%"):
+        cleaned = cleaned.replace(symbol, "")
     try:
-        return float(str(value).replace(",", "").replace("%", "").strip())
+        return float(cleaned.strip())
     except ValueError:
         return 0.0
 
