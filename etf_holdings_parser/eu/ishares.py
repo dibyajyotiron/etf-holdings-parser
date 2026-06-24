@@ -30,18 +30,86 @@ cleared):
 from __future__ import annotations
 
 import re
+from datetime import datetime
 
-from etf_holdings_parser.base import Holding, csv_rows, safe_float
+from etf_holdings_parser.base import FundProfile, Holding, csv_rows, safe_float
 
 _WORKSHEET_RE = re.compile(r'<ss:Worksheet ss:Name="([^"]*)">(.*?)</ss:Worksheet>', re.S)
 _ROW_RE = re.compile(r"<ss:Row[^>]*>(.*?)</ss:Row>", re.S)
 _CELL_RE = re.compile(r"<ss:Data[^>]*>(.*?)</ss:Data>", re.S)
+
+# Domicile is published as a full country name ("Ireland"), FundProfile wants
+# an ISO code — verified against the real fixture (tests/fixtures/
+# igln_overview_sample.xls), extended with the other domiciles iShares'
+# European range actually uses.
+_DOMICILE_TO_ISO = {
+    "ireland": "IE",
+    "luxembourg": "LU",
+    "germany": "DE",
+    "france": "FR",
+}
 
 
 def parse(raw: str) -> list[Holding]:
     if "ss:Workbook" in raw or raw.lstrip().startswith("<?xml"):
         return _parse_single_asset_overview(raw)
     return _parse_holdings_csv(raw)
+
+
+def parse_profile(raw: str) -> FundProfile:
+    """Fund-level metadata from the Overview worksheet — verified field names
+    against a real captured export (tests/fixtures/igln_overview_sample.xls,
+    captured 2026-06-23). Only present when `raw` is the Overview-bearing
+    export (iShares' "_fund" link); the "_holdings" CSV export has no
+    Overview sheet at all, so callers get {} for that payload — that's the
+    truth (issuer didn't publish it in this file), not a parsing failure.
+    """
+    if not ("ss:Workbook" in raw or raw.lstrip().startswith("<?xml")):
+        return FundProfile()
+    sheets = {name: body for name, body in _WORKSHEET_RE.findall(raw)}
+    if "Overview" not in sheets:
+        return FundProfile()
+    overview = _overview_key_values(sheets["Overview"])
+    if not overview:
+        return FundProfile()
+
+    profile = FundProfile()
+    if isin := overview.get("ISIN"):
+        profile["isin"] = isin
+    if currency := overview.get("Base Currency"):
+        profile["fund_currency"] = currency
+    if index := overview.get("Index"):
+        profile["benchmark_index"] = index
+    if methodology := overview.get("Methodology"):
+        profile["replication_method"] = methodology
+    if issuing_company := overview.get("Issuing Company"):
+        profile["management_company"] = issuing_company
+
+    if domicile := overview.get("Domicile"):
+        profile["domicile"] = _DOMICILE_TO_ISO.get(domicile.strip().lower(), domicile)
+
+    if ucits := overview.get("UCITS"):
+        profile["ucits"] = ucits.strip().lower() == "yes"
+
+    if ter := overview.get("Total Expense Ratio"):
+        profile["ter"] = safe_float(ter)
+
+    if launch_date := overview.get("Fund Launch Date"):
+        try:
+            profile["inception_date"] = datetime.strptime(launch_date, "%d/%b/%Y").date().isoformat()
+        except ValueError:
+            pass
+
+    net_assets = overview.get("Net Assets of Fund")
+    if net_assets:
+        parts = net_assets.split(maxsplit=1)
+        if len(parts) == 2 and parts[0].isalpha():
+            profile["fund_size_currency"] = parts[0]
+            profile["fund_size"] = safe_float(parts[1])
+        else:
+            profile["fund_size"] = safe_float(net_assets)
+
+    return profile
 
 
 def _parse_holdings_csv(raw: str) -> list[Holding]:
