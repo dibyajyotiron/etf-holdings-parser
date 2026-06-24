@@ -1,0 +1,527 @@
+{
+  "products": [
+    {
+      "productId": "LU1681043599",
+      "characteristics": {
+        "ISIN": "LU1681043599",
+        "SHARE_MARKETING_NAME": "Amundi MSCI World Swap UCITS ETF EUR Acc",
+        "MNEMO": "CW8",
+        "FUND_DOMICILIATION_COUNTRY": "Luxembourg",
+        "FUND_REPLICATION_METHODOLOGY": "Indirect(Swap Based)",
+        "TER": 0.38,
+        "FUND_AUM_IN_EURO": 6748730282.08083
+      },
+      "productType": "PRODUCT",
+      "currencies": {
+        "CURRENCY": "EUR",
+        "BASE_CURRENCY": "EUR",
+        "INDEX_CURRENCY": "EUR"
+      },
+      "metrics": [],
+      "historics": [],
+      "passportingCountries": null,
+      "composition": {
+        "totalNumberOfInstruments": 125,
+        "compositionData": [
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 354996.0,
+              "bbg": "ASML NA",
+              "name": "ASML HOLDING NV",
+              "weight": 0.08632061184834348,
+              "currency": "EUR",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Information Technology",
+              "isin": "NL0010273215",
+              "countryOfRisk": "Netherlands"
+            },
+            "weight": 0.08632061184834348
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 2784849.0,
+              "bbg": "ENR GY",
+              "name": "SIEMENS ENERGY AG",
+              "weight": 0.06917213020301072,
+              "currency": "EUR",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Industrials",
+              "isin": "DE000ENER6Y0",
+              "countryOfRisk": "Germany"
+            },
+            "weight": 0.06917213020301072
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 898699.0,
+              "bbg": "ALV GY",
+              "name": "ALLIANZ SE-REG",
+              "weight": 0.053661746698829005,
+              "currency": "EUR",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Financials",
+              "isin": "DE0008404005",
+              "countryOfRisk": "Germany"
+            },
+            "weight": 0.053661746698829005
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 1850261.0,
+              "bbg": "AIR FP",
+              "name": "AIRBUS SE PARIS",
+              "weight": 0.05149572948488751,
+              "currency": "EUR",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Industrials",
+              "isin": "NL0000235190",
+              "countryOfRisk": "France"
+            },
+            "weight": 0.05149572948488751
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 3815881.0,
+              "bbg": "IFX GY",
+              "name": "INFINEON TECHNOLOGIES AG",
+              "weight": 0.04815854354306634,
+              "currency": "EUR",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Information Technology",
+              "isin": "DE0006231004",
+              "countryOfRisk": "Germany"
+            },
+            "weight": 0.04815854354306634
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 1065937.0,
+              "bbg": "SIE GY",
+              "name": "SIEMENS AG-REG",
+              "weight": 0.0436735920236054,
+              "currency": "EUR",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Industrials",
+              "isin": "DE0007236101",
+              "countryOfRisk": "Germany"
+            },
+            "weight": 0.0436735920236054
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 10294621.0,
+              "bbg": "DTE GY",
+              "name": "DEUTSCHE TELEKOM NAMEN (XETRA)",
+              "weight": 0.03948814268924025,
+              "currency": "EUR",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Communication Services",
+              "isin": "DE0005557508",
+              "countryOfRisk": "Germany"
+            },
+            "weight": 0.03948814268924025
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 529450.0,
+              "bbg": "META UW",
+              "name": "META PLATFORMS INC-CLASS A",
+              "weight": 0.03830336596255823,
+              "currency": "USD",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Communication Services",
+              "isin": "US30303M1027",
+              "countryOfRisk": "United States"
+            },
+            "weight": 0.03830336596255823
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 6708907.0,
+              "bbg": "BAYN GY",
+              "name": "BAYER AG-REG",
+              "weight": 0.03761584895495334,
+              "currency": "EUR",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Health Care",
+              "isin": "DE000BAY0017",
+              "countryOfRisk": "Germany"
+            },
+            "weight": 0.03761584895495334
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 1120528.0,
+              "bbg": "NVDA UW",
+              "name": "NVIDIA CORP",
+              "weight": 0.029997806871935286,
+              "currency": "USD",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Information Technology",
+              "isin": "US67066G1040",
+              "countryOfRisk": "United States"
+            },
+            "weight": 0.029997806871935286
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 780343.0,
+              "bbg": "AAPL UW",
+              "name": "APPLE INC",
+              "weight": 0.029737538216984754,
+              "currency": "USD",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Information Technology",
+              "isin": "US0378331005",
+              "countryOfRisk": "United States"
+            },
+            "weight": 0.029737538216984754
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 1494630.0,
+              "bbg": "SAP GY",
+              "name": "SAP SE / XETRA",
+              "weight": 0.029021110052456917,
+              "currency": "EUR",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Information Technology",
+              "isin": "DE0007164600",
+              "countryOfRisk": "Germany"
+            },
+            "weight": 0.029021110052456917
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 5476297.0,
+              "bbg": "INGA NA",
+              "name": "ING GROEP NV",
+              "weight": 0.022658653096093797,
+              "currency": "EUR",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Financials",
+              "isin": "NL0011821202",
+              "countryOfRisk": "Netherlands"
+            },
+            "weight": 0.022658653096093797
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 3680697.0,
+              "bbg": "PRX NA",
+              "name": "PROSUS NV",
+              "weight": 0.020461453919310625,
+              "currency": "EUR",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Consumer Discretionary",
+              "isin": "NL0013654783",
+              "countryOfRisk": "China"
+            },
+            "weight": 0.020461453919310625
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 1632840.0,
+              "bbg": "SAN FP",
+              "name": "SANOFI - PARIS",
+              "weight": 0.01738220640974969,
+              "currency": "EUR",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Health Care",
+              "isin": "FR0000120578",
+              "countryOfRisk": "United States"
+            },
+            "weight": 0.01738220640974969
+          }
+        ]
+      },
+      "breakDowns": [
+        {
+          "aggregationField": "FUND_TOP10",
+          "breakDownData": [
+            {
+              "aggregationName": "ASML HOLDING NV",
+              "weight": 0.0,
+              "adjustedWeight": 0.08632061184834,
+              "additionalProperties": {
+                "quantity": 354996.0,
+                "bbg": "ASML NA",
+                "currency": "EUR",
+                "sector": "Information Technology",
+                "isin": "NL0010273215",
+                "countryOfRisk": "Netherlands"
+              }
+            },
+            {
+              "aggregationName": "SIEMENS ENERGY AG",
+              "weight": 0.0,
+              "adjustedWeight": 0.06917213020301,
+              "additionalProperties": {
+                "quantity": 2784849.0,
+                "bbg": "ENR GY",
+                "currency": "EUR",
+                "sector": "Industrials",
+                "isin": "DE000ENER6Y0",
+                "countryOfRisk": "Germany"
+              }
+            },
+            {
+              "aggregationName": "ALLIANZ SE-REG",
+              "weight": 0.0,
+              "adjustedWeight": 0.05366174669883,
+              "additionalProperties": {
+                "quantity": 898699.0,
+                "bbg": "ALV GY",
+                "currency": "EUR",
+                "sector": "Financials",
+                "isin": "DE0008404005",
+                "countryOfRisk": "Germany"
+              }
+            },
+            {
+              "aggregationName": "AIRBUS SE PARIS",
+              "weight": 0.0,
+              "adjustedWeight": 0.05149572948489,
+              "additionalProperties": {
+                "quantity": 1850261.0,
+                "bbg": "AIR FP",
+                "currency": "EUR",
+                "sector": "Industrials",
+                "isin": "NL0000235190",
+                "countryOfRisk": "France"
+              }
+            },
+            {
+              "aggregationName": "INFINEON TECHNOLOGIES AG",
+              "weight": 0.0,
+              "adjustedWeight": 0.04815854354307,
+              "additionalProperties": {
+                "quantity": 3815881.0,
+                "bbg": "IFX GY",
+                "currency": "EUR",
+                "sector": "Information Technology",
+                "isin": "DE0006231004",
+                "countryOfRisk": "Germany"
+              }
+            },
+            {
+              "aggregationName": "SIEMENS AG-REG",
+              "weight": 0.0,
+              "adjustedWeight": 0.04367359202361,
+              "additionalProperties": {
+                "quantity": 1065937.0,
+                "bbg": "SIE GY",
+                "currency": "EUR",
+                "sector": "Industrials",
+                "isin": "DE0007236101",
+                "countryOfRisk": "Germany"
+              }
+            },
+            {
+              "aggregationName": "DEUTSCHE TELEKOM NAMEN (XETRA)",
+              "weight": 0.0,
+              "adjustedWeight": 0.03948814268924,
+              "additionalProperties": {
+                "quantity": 10294621.0,
+                "bbg": "DTE GY",
+                "currency": "EUR",
+                "sector": "Communication Services",
+                "isin": "DE0005557508",
+                "countryOfRisk": "Germany"
+              }
+            },
+            {
+              "aggregationName": "META PLATFORMS INC-CLASS A",
+              "weight": 0.0,
+              "adjustedWeight": 0.03830336596256,
+              "additionalProperties": {
+                "quantity": 529450.0,
+                "bbg": "META UW",
+                "currency": "USD",
+                "sector": "Communication Services",
+                "isin": "US30303M1027",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "BAYER AG-REG",
+              "weight": 0.0,
+              "adjustedWeight": 0.03761584895495,
+              "additionalProperties": {
+                "quantity": 6708907.0,
+                "bbg": "BAYN GY",
+                "currency": "EUR",
+                "sector": "Health Care",
+                "isin": "DE000BAY0017",
+                "countryOfRisk": "Germany"
+              }
+            },
+            {
+              "aggregationName": "NVIDIA CORP",
+              "weight": 0.0,
+              "adjustedWeight": 0.02999780687194,
+              "additionalProperties": {
+                "quantity": 1120528.0,
+                "bbg": "NVDA UW",
+                "currency": "USD",
+                "sector": "Information Technology",
+                "isin": "US67066G1040",
+                "countryOfRisk": "United States"
+              }
+            }
+          ]
+        },
+        {
+          "aggregationField": "INDEX_TOP10",
+          "breakDownData": [
+            {
+              "aggregationName": "NVIDIA CORP",
+              "weight": 0.0,
+              "adjustedWeight": 0.05414442723554,
+              "additionalProperties": {
+                "quantity": 0.0,
+                "bbg": "NVDA UW",
+                "currency": "USD",
+                "sector": "Information Technology",
+                "isin": "US67066G1040",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "APPLE INC",
+              "weight": 0.0,
+              "adjustedWeight": 0.049015827527,
+              "additionalProperties": {
+                "quantity": 0.0,
+                "bbg": "AAPL UW",
+                "currency": "USD",
+                "sector": "Information Technology",
+                "isin": "US0378331005",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "MICROSOFT CORP",
+              "weight": 0.0,
+              "adjustedWeight": 0.02912933568649,
+              "additionalProperties": {
+                "quantity": 0.0,
+                "bbg": "MSFT UW",
+                "currency": "USD",
+                "sector": "Information Technology",
+                "isin": "US5949181045",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "AMAZON.COM INC",
+              "weight": 0.0,
+              "adjustedWeight": 0.02532751115761,
+              "additionalProperties": {
+                "quantity": 0.0,
+                "bbg": "AMZN UW",
+                "currency": "USD",
+                "sector": "Consumer Discretionary",
+                "isin": "US0231351067",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "ALPHABET INC CL A",
+              "weight": 0.0,
+              "adjustedWeight": 0.02288487183403,
+              "additionalProperties": {
+                "quantity": 0.0,
+                "bbg": "GOOGL UW",
+                "currency": "USD",
+                "sector": "Communication Services",
+                "isin": "US02079K3059",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "BROADCOM INC",
+              "weight": 0.0,
+              "adjustedWeight": 0.01982662083742,
+              "additionalProperties": {
+                "quantity": 0.0,
+                "bbg": "AVGO UW",
+                "currency": "USD",
+                "sector": "Information Technology",
+                "isin": "US11135F1012",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "ALPHABET INC CL C",
+              "weight": 0.0,
+              "adjustedWeight": 0.01812237875523,
+              "additionalProperties": {
+                "quantity": 0.0,
+                "bbg": "GOOG UW",
+                "currency": "USD",
+                "sector": "Communication Services",
+                "isin": "US02079K1079",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "MICRON TECHNOLOGY INC",
+              "weight": 0.0,
+              "adjustedWeight": 0.0153565118246,
+              "additionalProperties": {
+                "quantity": 0.0,
+                "bbg": "MU UW",
+                "currency": "USD",
+                "sector": "Information Technology",
+                "isin": "US5951121038",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "META PLATFORMS INC-CLASS A",
+              "weight": 0.0,
+              "adjustedWeight": 0.01391907689651,
+              "additionalProperties": {
+                "quantity": 0.0,
+                "bbg": "META UW",
+                "currency": "USD",
+                "sector": "Communication Services",
+                "isin": "US30303M1027",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "TESLA INC",
+              "weight": 0.0,
+              "adjustedWeight": 0.01281410363879,
+              "additionalProperties": {
+                "quantity": 0.0,
+                "bbg": "TSLA UW",
+                "currency": "USD",
+                "sector": "Consumer Discretionary",
+                "isin": "US88160R1014",
+                "countryOfRisk": "United States"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

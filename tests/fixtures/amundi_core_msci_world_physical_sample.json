@@ -1,0 +1,526 @@
+{
+  "products": [
+    {
+      "productId": "IE000CNSFAR2",
+      "characteristics": {
+        "ISIN": "IE000CNSFAR2",
+        "SHARE_MARKETING_NAME": "Amundi Core MSCI World UCITS ETF Dist",
+        "FUND_DOMICILIATION_COUNTRY": "Ireland",
+        "FUND_REPLICATION_METHODOLOGY": "Direct(Physical)",
+        "TER": 0.12,
+        "FUND_AUM_IN_EURO": 15451655507.410498
+      },
+      "productType": "PRODUCT",
+      "currencies": {
+        "CURRENCY": "USD",
+        "BASE_CURRENCY": "USD",
+        "INDEX_CURRENCY": "USD"
+      },
+      "metrics": [],
+      "historics": [],
+      "passportingCountries": null,
+      "composition": {
+        "totalNumberOfInstruments": 1285,
+        "compositionData": [
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 4605254.0,
+              "bbg": "NVDA UW",
+              "name": "NVIDIA CORP",
+              "weight": 0.053714231157922454,
+              "currency": "USD",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Information Technology",
+              "isin": "US67066G1040",
+              "countryOfRisk": "United States"
+            },
+            "weight": 0.053714231157922454
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 2928802.0,
+              "bbg": "AAPL UW",
+              "name": "APPLE INC",
+              "weight": 0.04862711124724636,
+              "currency": "USD",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Information Technology",
+              "isin": "US0378331005",
+              "countryOfRisk": "United States"
+            },
+            "weight": 0.04862711124724636
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 1407451.0,
+              "bbg": "MSFT UW",
+              "name": "MICROSOFT CORP",
+              "weight": 0.028901400744822208,
+              "currency": "USD",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Information Technology",
+              "isin": "US5949181045",
+              "countryOfRisk": "United States"
+            },
+            "weight": 0.028901400744822208
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 1930479.9999999998,
+              "bbg": "AMZN UW",
+              "name": "AMAZON.COM INC",
+              "weight": 0.025121583631349323,
+              "currency": "USD",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Consumer Discretionary",
+              "isin": "US0231351067",
+              "countryOfRisk": "United States"
+            },
+            "weight": 0.025121583631349323
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 1161221.0,
+              "bbg": "GOOGL UW",
+              "name": "ALPHABET INC CL A",
+              "weight": 0.02269880850391831,
+              "currency": "USD",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Communication Services",
+              "isin": "US02079K3059",
+              "countryOfRisk": "United States"
+            },
+            "weight": 0.02269880850391831
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 897594.0,
+              "bbg": "AVGO UW",
+              "name": "BROADCOM INC",
+              "weight": 0.0196755733463117,
+              "currency": "USD",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Information Technology",
+              "isin": "US11135F1012",
+              "countryOfRisk": "United States"
+            },
+            "weight": 0.0196755733463117
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 921936.0,
+              "bbg": "GOOG UW",
+              "name": "ALPHABET INC CL C",
+              "weight": 0.017975034533216316,
+              "currency": "USD",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Communication Services",
+              "isin": "US02079K1079",
+              "countryOfRisk": "United States"
+            },
+            "weight": 0.017975034533216316
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 225124.0,
+              "bbg": "MU UW",
+              "name": "MICRON TECHNOLOGY INC",
+              "weight": 0.015244724566045973,
+              "currency": "USD",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Information Technology",
+              "isin": "US5951121038",
+              "countryOfRisk": "United States"
+            },
+            "weight": 0.015244724566045973
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 438010.0,
+              "bbg": "META UW",
+              "name": "META PLATFORMS INC-CLASS A",
+              "weight": 0.013805908695380271,
+              "currency": "USD",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Communication Services",
+              "isin": "US30303M1027",
+              "countryOfRisk": "United States"
+            },
+            "weight": 0.013805908695380271
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 561328.0,
+              "bbg": "TSLA UW",
+              "name": "TESLA INC",
+              "weight": 0.012709917423273483,
+              "currency": "USD",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Consumer Discretionary",
+              "isin": "US88160R1014",
+              "countryOfRisk": "United States"
+            },
+            "weight": 0.012709917423273483
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 325244.0,
+              "bbg": "AMD UW",
+              "name": "ADVANCED MICRO DEVICES",
+              "weight": 0.01002939086240977,
+              "currency": "USD",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Information Technology",
+              "isin": "US0079031078",
+              "countryOfRisk": "United States"
+            },
+            "weight": 0.01002939086240977
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 535537.0,
+              "bbg": "JPM UN",
+              "name": "JPMORGAN CHASE & CO",
+              "weight": 0.009923484550607323,
+              "currency": "USD",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Financials",
+              "isin": "US46625H1005",
+              "countryOfRisk": "United States"
+            },
+            "weight": 0.009923484550607323
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 160332.0,
+              "bbg": "LLY UN",
+              "name": "ELI LILLY & CO",
+              "weight": 0.009877583677242797,
+              "currency": "USD",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Health Care",
+              "isin": "US5324571083",
+              "countryOfRisk": "United States"
+            },
+            "weight": 0.009877583677242797
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 77418.0,
+              "bbg": "ASML NA",
+              "name": "ASML HOLDING NV",
+              "weight": 0.008201662501173426,
+              "currency": "EUR",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Information Technology",
+              "isin": "NL0010273215",
+              "countryOfRisk": "Netherlands"
+            },
+            "weight": 0.008201662501173426
+          },
+          {
+            "compositionCharacteristics": {
+              "date": "2026-06-22",
+              "quantity": 277742.0,
+              "bbg": "BRK/B UN",
+              "name": "BERKSHIRE HATHAWAY INC-CL B",
+              "weight": 0.007587389811088873,
+              "currency": "USD",
+              "type": "EQUITY_ORDINARY",
+              "sector": "Financials",
+              "isin": "US0846707026",
+              "countryOfRisk": "United States"
+            },
+            "weight": 0.007587389811088873
+          }
+        ]
+      },
+      "breakDowns": [
+        {
+          "aggregationField": "FUND_TOP10",
+          "breakDownData": [
+            {
+              "aggregationName": "NVIDIA CORP",
+              "weight": 0.0,
+              "adjustedWeight": 0.05371423115792,
+              "additionalProperties": {
+                "quantity": 4605254.0,
+                "bbg": "NVDA UW",
+                "currency": "USD",
+                "sector": "Information Technology",
+                "isin": "US67066G1040",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "APPLE INC",
+              "weight": 0.0,
+              "adjustedWeight": 0.04862711124725,
+              "additionalProperties": {
+                "quantity": 2928802.0,
+                "bbg": "AAPL UW",
+                "currency": "USD",
+                "sector": "Information Technology",
+                "isin": "US0378331005",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "MICROSOFT CORP",
+              "weight": 0.0,
+              "adjustedWeight": 0.02890140074482,
+              "additionalProperties": {
+                "quantity": 1407451.0,
+                "bbg": "MSFT UW",
+                "currency": "USD",
+                "sector": "Information Technology",
+                "isin": "US5949181045",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "AMAZON.COM INC",
+              "weight": 0.0,
+              "adjustedWeight": 0.02512158363135,
+              "additionalProperties": {
+                "quantity": 1930479.9999999998,
+                "bbg": "AMZN UW",
+                "currency": "USD",
+                "sector": "Consumer Discretionary",
+                "isin": "US0231351067",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "ALPHABET INC CL A",
+              "weight": 0.0,
+              "adjustedWeight": 0.02269880850392,
+              "additionalProperties": {
+                "quantity": 1161221.0,
+                "bbg": "GOOGL UW",
+                "currency": "USD",
+                "sector": "Communication Services",
+                "isin": "US02079K3059",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "BROADCOM INC",
+              "weight": 0.0,
+              "adjustedWeight": 0.01967557334631,
+              "additionalProperties": {
+                "quantity": 897594.0,
+                "bbg": "AVGO UW",
+                "currency": "USD",
+                "sector": "Information Technology",
+                "isin": "US11135F1012",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "ALPHABET INC CL C",
+              "weight": 0.0,
+              "adjustedWeight": 0.01797503453322,
+              "additionalProperties": {
+                "quantity": 921936.0,
+                "bbg": "GOOG UW",
+                "currency": "USD",
+                "sector": "Communication Services",
+                "isin": "US02079K1079",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "MICRON TECHNOLOGY INC",
+              "weight": 0.0,
+              "adjustedWeight": 0.01524472456605,
+              "additionalProperties": {
+                "quantity": 225124.0,
+                "bbg": "MU UW",
+                "currency": "USD",
+                "sector": "Information Technology",
+                "isin": "US5951121038",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "META PLATFORMS INC-CLASS A",
+              "weight": 0.0,
+              "adjustedWeight": 0.01380590869538,
+              "additionalProperties": {
+                "quantity": 438010.0,
+                "bbg": "META UW",
+                "currency": "USD",
+                "sector": "Communication Services",
+                "isin": "US30303M1027",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "TESLA INC",
+              "weight": 0.0,
+              "adjustedWeight": 0.01270991742327,
+              "additionalProperties": {
+                "quantity": 561328.0,
+                "bbg": "TSLA UW",
+                "currency": "USD",
+                "sector": "Consumer Discretionary",
+                "isin": "US88160R1014",
+                "countryOfRisk": "United States"
+              }
+            }
+          ]
+        },
+        {
+          "aggregationField": "INDEX_TOP10",
+          "breakDownData": [
+            {
+              "aggregationName": "NVIDIA CORP",
+              "weight": 0.0,
+              "adjustedWeight": 0.05414442723554,
+              "additionalProperties": {
+                "quantity": 0.0,
+                "bbg": "NVDA UW",
+                "currency": "USD",
+                "sector": "Information Technology",
+                "isin": "US67066G1040",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "APPLE INC",
+              "weight": 0.0,
+              "adjustedWeight": 0.049015827527,
+              "additionalProperties": {
+                "quantity": 0.0,
+                "bbg": "AAPL UW",
+                "currency": "USD",
+                "sector": "Information Technology",
+                "isin": "US0378331005",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "MICROSOFT CORP",
+              "weight": 0.0,
+              "adjustedWeight": 0.02912933568649,
+              "additionalProperties": {
+                "quantity": 0.0,
+                "bbg": "MSFT UW",
+                "currency": "USD",
+                "sector": "Information Technology",
+                "isin": "US5949181045",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "AMAZON.COM INC",
+              "weight": 0.0,
+              "adjustedWeight": 0.02532751115761,
+              "additionalProperties": {
+                "quantity": 0.0,
+                "bbg": "AMZN UW",
+                "currency": "USD",
+                "sector": "Consumer Discretionary",
+                "isin": "US0231351067",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "ALPHABET INC CL A",
+              "weight": 0.0,
+              "adjustedWeight": 0.02288487183403,
+              "additionalProperties": {
+                "quantity": 0.0,
+                "bbg": "GOOGL UW",
+                "currency": "USD",
+                "sector": "Communication Services",
+                "isin": "US02079K3059",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "BROADCOM INC",
+              "weight": 0.0,
+              "adjustedWeight": 0.01982662083742,
+              "additionalProperties": {
+                "quantity": 0.0,
+                "bbg": "AVGO UW",
+                "currency": "USD",
+                "sector": "Information Technology",
+                "isin": "US11135F1012",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "ALPHABET INC CL C",
+              "weight": 0.0,
+              "adjustedWeight": 0.01812237875523,
+              "additionalProperties": {
+                "quantity": 0.0,
+                "bbg": "GOOG UW",
+                "currency": "USD",
+                "sector": "Communication Services",
+                "isin": "US02079K1079",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "MICRON TECHNOLOGY INC",
+              "weight": 0.0,
+              "adjustedWeight": 0.0153565118246,
+              "additionalProperties": {
+                "quantity": 0.0,
+                "bbg": "MU UW",
+                "currency": "USD",
+                "sector": "Information Technology",
+                "isin": "US5951121038",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "META PLATFORMS INC-CLASS A",
+              "weight": 0.0,
+              "adjustedWeight": 0.01391907689651,
+              "additionalProperties": {
+                "quantity": 0.0,
+                "bbg": "META UW",
+                "currency": "USD",
+                "sector": "Communication Services",
+                "isin": "US30303M1027",
+                "countryOfRisk": "United States"
+              }
+            },
+            {
+              "aggregationName": "TESLA INC",
+              "weight": 0.0,
+              "adjustedWeight": 0.01281410363879,
+              "additionalProperties": {
+                "quantity": 0.0,
+                "bbg": "TSLA UW",
+                "currency": "USD",
+                "sector": "Consumer Discretionary",
+                "isin": "US88160R1014",
+                "countryOfRisk": "United States"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -197,7 +197,7 @@ REGISTRY: dict[tuple[str, str], dict[str, object]] = {
     ("eu", "vanguard"): {"module": "etf_holdings_parser.eu.vanguard", "implemented": True},
     ("eu", "ishares"): {"module": "etf_holdings_parser.eu.ishares", "implemented": True},
     ("eu", "xtrackers"): {"module": "etf_holdings_parser.eu.xtrackers", "implemented": False},
-    ("eu", "amundi"): {"module": "etf_holdings_parser.eu.amundi", "implemented": False},
+    ("eu", "amundi"): {"module": "etf_holdings_parser.eu.amundi", "implemented": True},
     ("eu", "spdr"): {"module": "etf_holdings_parser.eu.spdr", "implemented": False},
     ("eu", "invesco"): {"module": "etf_holdings_parser.eu.invesco", "implemented": False},
     ("eu", "ubs"): {"module": "etf_holdings_parser.eu.ubs", "implemented": False},
